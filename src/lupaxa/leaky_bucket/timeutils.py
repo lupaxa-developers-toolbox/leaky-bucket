@@ -11,7 +11,6 @@ class TimeProvider(Protocol):
 
     def now(self) -> float:
         """Return the current time in seconds."""
-        ...
 
 
 @runtime_checkable
@@ -20,7 +19,6 @@ class AdvanceableTimeProvider(TimeProvider, Protocol):
 
     def advance(self, seconds: float) -> None:
         """Move the clock forward by ``seconds``."""
-        ...
 
 
 class SystemTimeProvider:
